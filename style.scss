@@ -23,7 +23,7 @@ header {
     background: url(./img/mobile/image-header.jpg) bottom center/cover;
     
     h1 {
-        padding-top: 50px;
+        padding-top: 30%;
         font-family: 'Fraunces', serif;
         font-size: 50px;
     }
@@ -33,8 +33,98 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 30%;
+        padding-top: 20%;
     }
+
+    .navbar_brandname {
+        padding-top: 8%;
+        padding-left: 5%;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2;
+  -webkit-touch-callout: none;
+
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+a {
+    height: 18px;
+    &:hover, &:active {
+        border-radius: 30%;
+        background: yellow;
+    }
+}
+
+#menu {
+    clip-path: polygon(0 11%, 90% 11%, 100% 0, 100% 100%, 75% 100%, 51% 100%, 0 100%);
+    position: absolute;
+    width: 320px;
+    margin: 30px 0px 0 -300px;
+    padding: 40px;
+    background: white;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    opacity: 0%;
+}
+
+#menu li{
+  padding-top: 40px;
+  
+  a{
+    font-family: 'Barlow', sans-serif;
+  }
+}
+
+#menuToggle input:checked ~ ul{
+  transform: none;
+  opacity: 100%;
+  transition: all ease-in-out 0.1s;
+  
+}
+
+@media screen and (min-width: 600px){
+
+    #menuToggle{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    }
+
 }
 
 
@@ -82,6 +172,9 @@ header {
 
     a {
         font-family: 'Barlow', sans-serif;
+        padding-bottom: 15px;
+        border-bottom: solid 10px #FFD8D1;
+        border-radius: 10%;
     }
 }
 
@@ -196,12 +289,19 @@ footer {
     text-decoration: none;
     font-family: 'Barlow', sans-serif;
 
+    img {
+        filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(116deg) brightness(95%) contrast(100%);
+
+    }
+
     ul {
         padding-top: 15%;
          li {
             display: inline-block;
             align-items: center;
             padding-bottom: 15%;
+            padding-left: 5%;
+            padding-right: 5%;
 
              a {
                 color: hsl(168, 34%, 41%);
@@ -213,6 +313,7 @@ footer {
         display: inline-block;
         align-items: center;
         padding-bottom: 15%;
+        
     }
 
 }

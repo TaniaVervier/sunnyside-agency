@@ -25,7 +25,7 @@ header {
 }
 
 header h1 {
-  padding-top: 50px;
+  padding-top: 30%;
   font-family: 'Fraunces', serif;
   font-size: 50px;
 }
@@ -44,7 +44,107 @@ header figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 30%;
+  padding-top: 20%;
+}
+
+header .navbar_brandname {
+  padding-top: 8%;
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+a {
+  height: 18px;
+}
+
+a:hover, a:active {
+  border-radius: 30%;
+  background: yellow;
+}
+
+#menu {
+  -webkit-clip-path: polygon(0 11%, 90% 11%, 100% 0, 100% 100%, 75% 100%, 51% 100%, 0 100%);
+          clip-path: polygon(0 11%, 90% 11%, 100% 0, 100% 100%, 75% 100%, 51% 100%, 0 100%);
+  position: absolute;
+  width: 320px;
+  margin: 30px 0px 0 -300px;
+  padding: 40px;
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  opacity: 0%;
+}
+
+#menu li {
+  padding-top: 40px;
+}
+
+#menu li a {
+  font-family: 'Barlow', sans-serif;
+}
+
+#menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 100%;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+}
+
+@media screen and (min-width: 600px) {
+  #menuToggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .wrapper {
@@ -102,6 +202,9 @@ header figure {
 
 .transform a, .audience a {
   font-family: 'Barlow', sans-serif;
+  padding-bottom: 15px;
+  border-bottom: solid 10px #FFD8D1;
+  border-radius: 10%;
 }
 
 .egg, .glass {
@@ -221,6 +324,11 @@ footer {
   font-family: 'Barlow', sans-serif;
 }
 
+footer img {
+  -webkit-filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(116deg) brightness(95%) contrast(100%);
+          filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(116deg) brightness(95%) contrast(100%);
+}
+
 footer ul {
   padding-top: 15%;
 }
@@ -231,6 +339,8 @@ footer ul li {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 footer ul li a {
