@@ -354,4 +354,9 @@ footer .footer_icones {
           align-items: center;
   padding-bottom: 15%;
 }
+
+footer a {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 /*# sourceMappingURL=style.css.map */
