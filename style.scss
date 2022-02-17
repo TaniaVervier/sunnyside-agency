@@ -18,22 +18,24 @@ body {
 
 
 header {
-    height: 100vh;
     color: white;
     background: url(./img/mobile/image-header.jpg) bottom center/cover;
     
     h1 {
-        padding-top: 30%;
+        padding-top: 20%;
+        padding-bottom: 15%;
         font-family: 'Fraunces', serif;
-        font-size: 50px;
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
     }
 
-    figure {
+    .headerimg {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 20%;
+        padding-bottom: 40%;
+        
     }
 
     .navbar_brandname {
@@ -44,6 +46,7 @@ header {
     }
 }
 
+//***********NAVBAR MENU ***********//
 
 #menuToggle {
   display: block;
@@ -116,16 +119,7 @@ a {
   
 }
 
-@media screen and (min-width: 600px){
-
-    #menuToggle{
-    display: flex;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    }
-
-}
+//******************END***************//
 
 
 .wrapper {
@@ -283,15 +277,14 @@ a {
 }
 
 footer {
-    height: 40vh;
+    
     padding-top: 15%;
     background: #90D4C5;
     text-decoration: none;
     font-family: 'Barlow', sans-serif;
 
-    img {
+    #logo {
         filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(116deg) brightness(95%) contrast(100%);
-
     }
 
     ul {
@@ -302,10 +295,6 @@ footer {
             padding-bottom: 15%;
             padding-left: 5%;
             padding-right: 5%;
-
-             a {
-                color: hsl(168, 34%, 41%);
-            }
         }
     }
 
@@ -318,6 +307,68 @@ footer {
     a {
         padding-left: 5%;
         padding-right: 5%;
+        color: #2C7363;
     }
+
+}
+
+
+//***************DESKTOP ADAPTATION****************//
+
+@media screen and (min-width: 600px) {
+    header {
+        background: url(./img/desktop/image-header.jpg) no-repeat bottom/cover;
+        height: 80vh;
+
+        h1 {
+            padding-top: 5%;
+            padding-bottom: 10%;
+        }
+
+        figure {
+            height: 30%;
+        }
+    }
+    
+
+
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+        h2 {
+            padding-bottom: 15%;
+        }
+    
+        p {
+            padding-bottom: 15%;
+        }
+    }
+
+    .transform, .audience {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+
+
+
 
 }
