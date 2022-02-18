@@ -50,9 +50,21 @@
         <a href="#"><strong>LEARN MORE</strong></a>
     </div>
 
-    <div class="egg"><img src="./img/mobile/image-transform.jpg"></div>
+    <div class="egg">
+        <picture>
+            <source media="(max-width: 799px)" srcset="./img/mobile/image-transform.jpg">
+            <source media="(min-width: 800px)" srcset="./img/desktop/image-transform.jpg">
+            <img alt="SEO" class="egg" src="./img/desktop/image-transform.jpg">
+        </picture>
+        
+    </div>
 
-    <div class="glass"><img src="./img/mobile/image-stand-out.jpg"></div>
+    <div class="glass">
+        <picture>
+            <source media="(max-width: 799px)" src="./img/mobile/image-stand-out.jpg">
+            <source media="(min-width: 800px)" src="./img/desktop/image-stand-out.jpg">
+            <img alt="SEO" class="glass" src="./img/desktop/image-stand-out.jpg">
+    </div>
 
     <div class="audience">
         <h2>Stand out to the right audience</h2>
@@ -71,9 +83,10 @@
     </div>
     </div>
 
+    
+        <div class="test"><h3>CLIENT TESTIMONIALS</h3></div>
+
     <div class="testimonials">
-        <h3>CLIENT TESTIMONIALS</h3>
-        
         <div class="Emily">
             <img class="testimonials_picture" src="./img/people/image-emily.jpg">
             <p class="testimonials_p">We put our truste in Sunnyside and they delivered, making sur our needs were met and deadlines were always hit.</p>

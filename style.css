@@ -59,6 +59,15 @@ header .navbar_brandname {
           justify-content: flex-start;
 }
 
+header a {
+  height: 18px;
+}
+
+header a:hover, header a:active {
+  border-radius: 30%;
+  background: yellow;
+}
+
 #menuToggle {
   display: block;
   position: absolute;
@@ -91,15 +100,6 @@ header .navbar_brandname {
   background: white;
   border-radius: 3px;
   z-index: 1;
-}
-
-a {
-  height: 18px;
-}
-
-a:hover, a:active {
-  border-radius: 30%;
-  background: yellow;
 }
 
 #menu {
@@ -146,7 +146,7 @@ a:hover, a:active {
 
 .wrapper img {
   width: 100%;
-  height: 50vh;
+  height: 100%;
 }
 
 .wrapper h2 {
@@ -157,9 +157,8 @@ a:hover, a:active {
   padding-bottom: 15%;
 }
 
-.transform, .audience {
+.wrapper .transform, .wrapper .audience {
   background-color: white;
-  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,35 +172,29 @@ a:hover, a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 15%;
 }
 
-.transform h2, .transform a, .audience h2, .audience a {
+.wrapper .transform h2, .wrapper .transform a, .wrapper .audience h2, .wrapper .audience a {
   color: #23303e;
 }
 
-.transform h2, .audience h2 {
+.wrapper .transform h2, .wrapper .audience h2 {
   font-family: 'Fraunces', serif;
 }
 
-.transform p, .audience p {
+.wrapper .transform p, .wrapper .audience p {
   color: #95949A;
   font-family: 'Barlow', sans-serif;
 }
 
-.transform a, .audience a {
+.wrapper .transform a, .wrapper .audience a {
   font-family: 'Barlow', sans-serif;
-  padding-bottom: 15px;
-  border-bottom: solid 10px #FFD8D1;
+  text-shadow: 0px 10px 15px red;
   border-radius: 10%;
 }
 
-.egg, .glass {
-  height: 50vh;
-}
-
-.graphic {
+.wrapper .graphic {
   height: 80vh;
   background: url(./img/desktop/image-graphic-design.jpg) center/cover;
   display: -webkit-box;
@@ -217,16 +210,16 @@ a:hover, a:active {
   color: #25564b;
 }
 
-.graphic h3 {
+.wrapper .graphic h3 {
   padding-bottom: 10%;
   font-family: 'Fraunces', serif;
 }
 
-.graphic p {
+.wrapper .graphic p {
   font-family: 'Barlow', sans-serif;
 }
 
-.photography {
+.wrapper .photography {
   height: 80vh;
   background: url(./img/desktop/image-photography.jpg) center/cover;
   display: -webkit-box;
@@ -242,26 +235,26 @@ a:hover, a:active {
   color: #19536b;
 }
 
-.photography h3 {
+.wrapper .photography h3 {
   padding-bottom: 10%;
   font-family: 'Fraunces', serif;
 }
 
-.photography p {
+.wrapper .photography p {
   font-family: 'Barlow', sans-serif;
 }
 
-.testimonials {
-  background: white;
-}
-
-.testimonials h3 {
+.test {
   color: #AEAEAE;
   padding-top: 15%;
   padding-bottom: 15%;
   padding-left: 12%;
   padding-right: 12%;
   font-family: 'Fraunces', serif;
+}
+
+.testimonials {
+  background: white;
 }
 
 .testimonials .testimonials_picture {
@@ -346,17 +339,19 @@ footer a {
   color: #2C7363;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   header {
     background: url(./img/desktop/image-header.jpg) no-repeat bottom/cover;
     height: 80vh;
   }
-  header h1 {
-    padding-top: 5%;
-    padding-bottom: 10%;
+  header .navbar_brandname {
+    padding-top: 3%;
+    padding-left: 2%;
   }
-  header figure {
-    height: 30%;
+  header h1 {
+    font-size: 3.5rem;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
   .wrapper {
     display: -ms-grid;
@@ -370,7 +365,8 @@ footer a {
   .wrapper p {
     padding-bottom: 15%;
   }
-  .transform, .audience {
+  .wrapper .transform, .wrapper .audience {
+    height: 45vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -378,14 +374,46 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    text-align: left;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .wrapper .transform h2, .wrapper .audience h2 {
+    font-size: 2rem;
+    text-align: left;
+    padding-top: 20%;
+    padding-bottom: 5%;
+  }
+  .wrapper .transform p, .wrapper .audience p {
+    text-align: left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .wrapper .transform a, .wrapper .audience a {
+    text-align: left;
+    border-radius: 10%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+  }
+  .wrapper .graphic, .wrapper .photography {
+    padding-top: 50%;
+    height: auto;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .wrapper .graphic p, .wrapper .photography p {
+    font-size: 14px;
+  }
+  .wrapper .graphic {
+    background: url(./img/desktop/image-graphic-design.jpg) center/cover;
+  }
+  .wrapper .photography {
+    background: url(./img/desktop/image-photography.jpg) center/cover;
+  }
+  .wrapper .egg, .wrapper .glass {
+    height: 100%;
   }
   .gallery {
     display: -ms-grid;
@@ -396,6 +424,41 @@ footer a {
   .gallery img {
     width: 100%;
     height: 100%;
+  }
+  .test {
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .testimonials {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  footer {
+    padding-top: 5%;
+    background: #90D4C5;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+  }
+  footer #logo {
+    -webkit-filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(116deg) brightness(95%) contrast(100%);
+            filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(116deg) brightness(95%) contrast(100%);
+  }
+  footer ul {
+    padding-top: 5%;
+  }
+  footer ul li {
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  footer a {
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #2C7363;
   }
 }
 /*# sourceMappingURL=style.css.map */
