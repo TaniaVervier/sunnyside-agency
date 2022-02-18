@@ -49,7 +49,7 @@ header .headerimg {
 }
 
 header .navbar_brandname {
-  padding-top: 8%;
+  padding-top: 5%;
   padding-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +71,7 @@ header a:hover, header a:active {
 #menuToggle {
   display: block;
   position: absolute;
-  top: 5%;
+  padding-top: 0;
   right: 5%;
   z-index: 1;
   -webkit-user-select: none;
@@ -93,8 +93,8 @@ header a:hover, header a:active {
 
 #menuToggle span {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 35px;
+  height: 5px;
   margin-bottom: 5px;
   position: relative;
   background: white;
@@ -195,8 +195,8 @@ header a:hover, header a:active {
 }
 
 .wrapper .graphic {
-  height: 80vh;
-  background: url(./img/desktop/image-graphic-design.jpg) center/cover;
+  height: auto;
+  background: url(./img/mobile/image-graphic-design.jpg) center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,8 +220,8 @@ header a:hover, header a:active {
 }
 
 .wrapper .photography {
-  height: 80vh;
-  background: url(./img/desktop/image-photography.jpg) center/cover;
+  height: auto;
+  background: url(./img/mobile/image-photography.jpg) center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -40,7 +40,7 @@ header {
     }
 
     .navbar_brandname {
-        padding-top: 8%;
+        padding-top: 5%;
         padding-left: 5%;
         display: flex;
         justify-content: flex-start;
@@ -57,15 +57,16 @@ header {
 
 //***********NAVBAR MENU ***********//
 
+
+
 #menuToggle {
   display: block;
   position: absolute;
-  top: 5%;
+  padding-top: 0;
   right: 5%;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
-
 }
 
 #menuToggle input {
@@ -82,17 +83,14 @@ header {
 
 #menuToggle span {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 35px;
+  height: 5px;
   margin-bottom: 5px;
   position: relative;
   background: white;
   border-radius: 3px;
   z-index: 1;
 }
-
-
-
 
 #menu {
     clip-path: polygon(0 11%, 90% 11%, 100% 0, 100% 100%, 75% 100%, 51% 100%, 0 100%);
@@ -174,11 +172,10 @@ header {
         }
     }
 
-    
 
     .graphic {
-        height: 80vh;
-        background: url(./img/desktop/image-graphic-design.jpg) center/cover;
+        height: auto;
+        background: url(./img/mobile/image-graphic-design.jpg) center/cover;
         display: flex;
         flex-direction: column;
         padding-top: 80%;
@@ -198,8 +195,8 @@ header {
     }
 
     .photography {
-        height: 80vh;
-        background: url(./img/desktop/image-photography.jpg) center/cover;
+        height: auto;
+        background: url(./img/mobile/image-photography.jpg) center/cover;
         display: flex;
         flex-direction: column;
         padding-top: 80%;
