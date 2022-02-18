@@ -49,8 +49,7 @@ header {
     a {
         height: 18px;
         &:hover, &:active {
-            border-radius: 30%;
-            background: yellow;
+            
         }
     }
 }
@@ -58,41 +57,29 @@ header {
 //***********NAVBAR MENU ***********//
 
 
-
 #menuToggle {
-  display: block;
-  position: absolute;
-  padding-top: 0;
-  right: 5%;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0; 
-  z-index: 2;
-  -webkit-touch-callout: none;
-
-}
-
-#menuToggle span {
-  display: block;
-  width: 35px;
-  height: 5px;
-  margin-bottom: 5px;
-  position: relative;
-  background: white;
-  border-radius: 3px;
-  z-index: 1;
-}
-
-#menu {
+    display: block;
+    position: absolute;
+    padding-top: 0;
+    right: 5%;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+    
+    #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; 
+    z-index: 2;
+    -webkit-touch-callout: none;
+    
+    }
+    
+    #menu {
     clip-path: polygon(0 11%, 90% 11%, 100% 0, 100% 100%, 75% 100%, 51% 100%, 0 100%);
     position: absolute;
     width: 320px;
@@ -104,22 +91,21 @@ header {
     transform-origin: 0% 0%;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     opacity: 0%;
-}
-
-#menu li{
-  padding-top: 40px;
-  
-  a{
+    }
+    
+    #menu li{
+    padding-top: 40px;
+    a{
     font-family: 'Barlow', sans-serif;
-  }
-}
-
-#menuToggle input:checked ~ ul{
-  transform: none;
-  opacity: 100%;
-  transition: all ease-in-out 0.1s;
-  
-}
+    }
+    }
+    
+    #menuToggle input:checked ~ ul{
+    transform: none;
+    opacity: 100%;
+    transition: all ease-in-out 0.1s;
+    }
+    
 
 //******************MENU***END***************//
 
@@ -318,7 +304,7 @@ footer {
         height: 80vh;
 
         .navbar_brandname {
-            padding-top: 3%;
+            padding-top: 5%;
             padding-left: 2%;
         }
 
@@ -454,5 +440,7 @@ footer {
 
 
     }
-
+    
+      
+    
 }

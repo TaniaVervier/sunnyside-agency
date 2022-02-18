@@ -63,11 +63,6 @@ header a {
   height: 18px;
 }
 
-header a:hover, header a:active {
-  border-radius: 30%;
-  background: yellow;
-}
-
 #menuToggle {
   display: block;
   position: absolute;
@@ -89,17 +84,6 @@ header a:hover, header a:active {
   opacity: 0;
   z-index: 2;
   -webkit-touch-callout: none;
-}
-
-#menuToggle span {
-  display: block;
-  width: 35px;
-  height: 5px;
-  margin-bottom: 5px;
-  position: relative;
-  background: white;
-  border-radius: 3px;
-  z-index: 1;
 }
 
 #menu {
@@ -345,7 +329,7 @@ footer a {
     height: 80vh;
   }
   header .navbar_brandname {
-    padding-top: 3%;
+    padding-top: 5%;
     padding-left: 2%;
   }
   header h1 {
